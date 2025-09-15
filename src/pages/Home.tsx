@@ -1,29 +1,44 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Shield, Clock, Users, Phone, MessageCircle } from 'lucide-react';
+import { ArrowRight, Star, Shield, Clock, Phone, MessageCircle, Wrench } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import JsonLd from '../components/JsonLd';
+import { localBusiness } from '../data/localBusiness.ts';
+import { services as servicesSchema } from '../data/services.ts';
+import { reviews as reviewsSchema } from '../data/reviews.ts';
+import OurProcess from '../components/OurProcess';
 
 const Home = () => {
   const services = [
     {
       title: 'Wooden Furniture Polish',
       description: 'Professional polishing for all types of wooden furniture',
-      image: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg'
+      image: '/assets/wooden furniture .webp',
+      link: '/wooden-furniture-polish'
     },
     {
       title: 'Sofa & Chair Polishing',
       description: 'Restore the shine and beauty of your upholstered furniture',
-      image: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg'
+      image: '/assets/Sofa And chair.jpg',
+      link: '/sofa-chair-polishing'
+    },
+    {
+      title: 'Table & Bed Polishing',
+      description: 'Specialized care for dining tables, beds, and more',
+      image: '/assets/Table & Bed Polishing.jpg',
+      link: '/table-bed-polishing'
     },
     {
       title: 'Antique Restoration',
       description: 'Specialized care for vintage and antique furniture pieces',
-      image: 'https://images.pexels.com/photos/2062431/pexels-photo-2062431.jpeg'
+      image: '/assets/Antique Restoration.jpg',
+      link: '/antique-restoration'
     },
     {
       title: 'Commercial Polishing',
       description: 'Professional furniture polishing for offices and businesses',
-      image: 'https://images.pexels.com/photos/2041627/pexels-photo-2041627.jpeg'
+      image: '/assets/drying-finishing.webp',
+      link: '/commercial-polishing'
     }
   ];
 
@@ -51,30 +66,34 @@ const Home = () => {
   return (
     <>
       <SEOHead
-        title="A1 Furniture Polish Mumbai - Professional Furniture Polishing Services"
-        description="Leading furniture polishing services in Mumbai. Professional wooden furniture polish, sofa polishing, antique restoration. Call +91 98765 43210 for quality service."
-        keywords="furniture polish Mumbai, furniture polishing services Mumbai, wooden furniture polish, sofa polishing Mumbai, furniture restoration Mumbai, professional furniture polishers Mumbai"
-        canonical="https://a1furniturepolish.com/"
+        title="A1 Furniture Polish — Professional Wooden Furniture Polishing in Mumbai"
+        description="A1 Furniture Polish offers expert wooden furniture polishing, scratch repair, and restoration in Mumbai. Book online or call for a free estimate."
+        ogUrl="https://a1furniturepolish.com/"
+        ogImage="/assets/Sofa And chair.jpg"
       />
+      <JsonLd data={localBusiness} />
+      <JsonLd data={servicesSchema} />
+      <JsonLd data={reviewsSchema} />
+
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-amber-50 to-orange-50 py-20">
+      <section className="relative bg-gradient-to-br from-amber-50 to-orange-50 py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Professional <span className="text-amber-600">Furniture Polish</span> Services in Mumbai
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Professional <span className='text-amber-600'>Furniture</span> <span className='text-amber-600'>Polish</span> Services in Mumbai
               </h1>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
                 Transform your furniture with A1 Furniture Polish - Mumbai's trusted experts in wooden furniture polishing, restoration, and refinishing. We bring back the original shine and beauty to your valuable furniture pieces.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:+919920397636"
+                  href="tel:+918828709945"
                   className="flex items-center justify-center space-x-2 bg-amber-600 text-white px-8 py-4 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
                 >
                   <Phone size={20} />
-                  <span className="font-semibold">Call Now: +91 99203 97636</span>
+                  <span className="font-semibold">Call Now: +91 8828709945</span>
                 </a>
                 <Link
                   to="/services"
@@ -85,13 +104,14 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <img
-                src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg"
+                src="/assets/Sofa And chair.jpg"
                 alt="Professional furniture polishing in Mumbai"
-                className="rounded-lg shadow-2xl w-full h-96 object-cover"
+                className="rounded-lg shadow-2xl w-full h-80 md:h-96 object-cover"
+                loading="lazy"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white p-3 md:p-4 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-2">
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
@@ -107,6 +127,8 @@ const Home = () => {
         </div>
       </section>
 
+      <OurProcess />
+
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,7 +140,7 @@ const Home = () => {
               We are Mumbai's most trusted furniture polishing service with years of experience in restoring and maintaining wooden furniture.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-amber-600" />
@@ -128,7 +150,7 @@ const Home = () => {
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition-shadow duration-200">
               <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-amber-600" />
+                <Wrench className="w-8 h-8 text-amber-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>
               <p className="text-gray-600">Skilled craftsmen with 10+ years experience in furniture polishing and restoration.</p>
@@ -162,19 +184,20 @@ const Home = () => {
               From wooden furniture polish to complete restoration, we offer comprehensive furniture care services across Mumbai.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.slice(0, 5).map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-48 object-cover"
+                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <Link
-                    to="/services"
+                    to={service.link}
                     className="text-amber-600 font-medium hover:text-amber-700 transition-colors duration-200"
                   >
                     Learn More →
@@ -219,22 +242,22 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-amber-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Ready to Restore Your Furniture's Beauty?
           </h2>
-          <p className="text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
             Contact A1 Furniture Polish today for professional furniture polishing services in Mumbai. Free quotes available!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919920397636"
+              href="tel:+918828709945"
               className="flex items-center justify-center space-x-2 bg-white text-amber-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"
             >
               <Phone size={20} />
-              <span>Call: +91 99203 97636</span>
+              <span>Call: +91 8828709945</span>
             </a>
             <a
-              href="https://wa.me/919920397636"
+              href="https://wa.me/918828709945"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg font-semibold"

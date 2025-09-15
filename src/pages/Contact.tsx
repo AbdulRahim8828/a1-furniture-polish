@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FormEvent, ChangeEvent } from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
@@ -11,7 +12,7 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Create mailto link with form data
     const subject = encodeURIComponent(`Furniture Polish Inquiry - ${formData.service || 'General'}`);
@@ -26,7 +27,7 @@ Message: ${formData.message}
     window.location.href = `mailto:A1furniturepolish@gmail.com?subject=${subject}&body=${body}`;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -36,25 +37,23 @@ Message: ${formData.message}
   return (
     <>
       <SEOHead
-        title="Contact A1 Furniture Polish Mumbai - Get Free Quote | +91 98765 43210"
-        description="Contact A1 Furniture Polish for professional furniture polishing services in Mumbai. Call +91 98765 43210 for free quotes. WhatsApp available. Serving all Mumbai areas."
-        keywords="contact furniture polish Mumbai, furniture polishing quote Mumbai, A1 furniture polish contact, professional furniture polishers Mumbai contact"
-        canonical="https://a1furniturepolish.com/contact"
+        title="Contact A1 Furniture Polish Mumbai - Get Free Quote | +91 8828709945"
+        description="Contact A1 Furniture Polish for professional furniture polishing services in Mumbai. Call +91 8828709945 for free quotes. WhatsApp available. Serving all Mumbai areas."
       />
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             Contact A1 Furniture Polish Mumbai
           </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
             Ready to restore your furniture's beauty? Get in touch with Mumbai's most trusted furniture polishing experts. Available 24 hours for your convenience!
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -62,20 +61,20 @@ Message: ${formData.message}
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
               
               <div className="space-y-6 mb-8">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-amber-600" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Call Us</h3>
-                    <a href="tel:+919920397636" className="text-amber-600 hover:text-amber-700 font-medium">
-                      +91 99203 97636
+                    <a href="tel:+918828709945" className="text-amber-600 hover:text-amber-700 font-medium">
+                      +91 8828709945
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-amber-600" />
                   </div>
                   <div>
@@ -86,8 +85,8 @@ Message: ${formData.message}
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-amber-600" />
                   </div>
                   <div>
@@ -96,8 +95,8 @@ Message: ${formData.message}
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-amber-600" />
                   </div>
                   <div>
@@ -110,14 +109,14 @@ Message: ${formData.message}
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:+919920397636"
+                  href="tel:+918828709945"
                   className="flex items-center justify-center space-x-2 bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
                 >
                   <Phone size={20} />
                   <span className="font-semibold">Call Now</span>
                 </a>
                 <a
-                  href="https://wa.me/919920397636"
+                  href="https://wa.me/918828709945"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
@@ -129,7 +128,7 @@ Message: ${formData.message}
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-lg">
+            <div className="bg-gray-50 p-6 md:p-8 rounded-lg shadow-lg">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Request Free Quote</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -229,7 +228,7 @@ Message: ${formData.message}
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -239,18 +238,16 @@ Message: ${formData.message}
               We serve customers across Mumbai and surrounding areas
             </p>
           </div>
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.6730027441!2d72.74109645!3d19.08219865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1639123456789!5m2!1sen!2sin"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="A1 Furniture Polish Mumbai Location"
-              className="rounded-lg"
-            />
+          <div className="bg-white p-2 md:p-4 rounded-lg shadow-lg">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.058352628886!2d72.83614527462436!3d19.14892284968038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b774c4aec095%3A0x5d8d2b1b1e74bc0a!2sA1%20Furniture%20Polish%20Service!5e0!3m2!1sen!2sin!4v1757836765117!5m2!1sen!2sin" 
+              width="100%" 
+              height="450" 
+              style={{ border:0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
       </section>

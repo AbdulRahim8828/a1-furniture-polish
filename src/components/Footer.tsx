@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
@@ -39,11 +38,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4 text-amber-400">Our Services</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-gray-300">Wooden Furniture Polish</li>
-              <li className="text-gray-300">Sofa & Chair Polishing</li>
-              <li className="text-gray-300">Table & Bed Polishing</li>
-              <li className="text-gray-300">Antique Restoration</li>
-              <li className="text-gray-300">Commercial Polishing</li>
+              <li><Link to="/wooden-furniture-polish" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Wooden Furniture Polish</Link></li>
+              <li><Link to="/sofa-chair-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Sofa & Chair Polishing</Link></li>
+              <li><Link to="/table-bed-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Table & Bed Polishing</Link></li>
+              <li><Link to="/antique-restoration" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Antique Restoration</Link></li>
+              <li><Link to="/commercial-polishing" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">Commercial Polishing</Link></li>
             </ul>
           </div>
 
@@ -53,8 +52,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone size={16} className="text-amber-400" />
-                <a href="tel:+919920397636" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">
-                  +91 99203 97636
+                <a href="tel:+918828709945" className="text-gray-300 hover:text-amber-400 transition-colors duration-200">
+                  +91 8828709945
                 </a>
               </div>
               <div className="flex items-center space-x-2">
@@ -63,8 +62,8 @@ const Footer = () => {
                   A1furniturepolish@gmail.com
                 </a>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin size={16} className="text-amber-400" />
+              <div className="flex items-start space-x-2">
+                <MapPin size={20} className="text-amber-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300 text-sm">Shop No 18, Akbar Ali Compound, Relief Road, near HK College, Oshiwara, Jogeshwari West, Mumbai, Maharashtra 400102</span>
               </div>
               <div className="flex items-center space-x-2">
@@ -72,7 +71,7 @@ const Footer = () => {
                 <span className="text-gray-300 text-sm">24 Hours Service</span>
               </div>
               <a
-                href="https://wa.me/919920397636"
+                href="https://wa.me/918828709945"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200 w-fit"

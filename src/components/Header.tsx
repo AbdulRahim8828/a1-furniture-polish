@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 
@@ -8,10 +8,10 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -51,14 +51,14 @@ const Header = () => {
           {/* Contact Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+919920397636"
+              href="tel:+918828709945"
               className="flex items-center space-x-2 bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors duration-200"
             >
               <Phone size={16} />
               <span className="text-sm font-medium">Call Now</span>
             </a>
             <a
-              href="https://wa.me/919920397636"
+              href="https://wa.me/918828709945"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-200"
@@ -97,14 +97,14 @@ const Header = () => {
               ))}
               <div className="flex space-x-2 pt-2">
                 <a
-                  href="tel:+919920397636"
-                  className="flex-1 flex items-center justify-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200"
+                  href="tel:+918828709945"
+                  className="flex-1 flex items-center justify-center space-x-2 bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors duration-200"
                 >
                   <Phone size={16} />
                   <span className="text-sm font-medium">Call</span>
                 </a>
                 <a
-                  href="https://wa.me/919920397636"
+                  href="https://wa.me/918828709945"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center justify-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-200"
