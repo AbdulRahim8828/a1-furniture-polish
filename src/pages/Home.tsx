@@ -7,6 +7,7 @@ import { localBusiness } from '../data/localBusiness.ts';
 import { services as servicesSchema } from '../data/services.ts';
 import { reviews as reviewsSchema } from '../data/reviews.ts';
 import OurProcess from '../components/OurProcess';
+import { testimonials } from '../data/testimonials.ts';
 
 const Home = () => {
   const services = [
@@ -37,29 +38,8 @@ const Home = () => {
     {
       title: 'Commercial Polishing',
       description: 'Professional furniture polishing for offices and businesses',
-      image: '/assets/drying-finishing.webp',
+      image: '/assets/Dining set polish.jpg',
       link: '/commercial-polishing'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Priya Sharma',
-      location: 'Bandra, Mumbai',
-      rating: 5,
-      text: 'Excellent service! My dining table looks brand new after A1 Furniture Polish treatment. Highly recommended for anyone in Mumbai.'
-    },
-    {
-      name: 'Rajesh Patel',
-      location: 'Andheri, Mumbai',
-      rating: 5,
-      text: 'Professional team and amazing results. They polished all my wooden furniture and the quality is outstanding. Best furniture polish service in Mumbai!'
-    },
-    {
-      name: 'Meera Joshi',
-      location: 'Powai, Mumbai',
-      rating: 5,
-      text: 'Very satisfied with their antique furniture restoration work. They brought my grandmother\'s cabinet back to life. Great craftsmanship!'
     }
   ];
 
@@ -185,7 +165,7 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.slice(0, 5).map((service, index) => (
+            {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-200">
                 <img
                   src={service.image}

@@ -82,10 +82,6 @@ const BlogPost = () => {
             <span className="text-gray-700 truncate w-64">{post.title}</span>
           </div>
 
-          <div className="w-full mb-6 md:mb-8 rounded-lg overflow-hidden">
-            <img src={post.image} alt={post.title} className="w-full h-auto object-cover" />
-          </div>
-
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             {post.title}
           </h1>

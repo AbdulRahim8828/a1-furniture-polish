@@ -1,3 +1,5 @@
+![How To Maintain Wooden Furniture At Home](/assets/How To Maintain Wooden Furniture At Home.jpeg)
+
 Your wooden furniture brings timeless elegance to your Mumbai home. But the city’s unique climate—with its high humidity and persistent dust—can be tough on its beautiful finish. Keeping that fresh-from-the-workshop shine requires a little bit of care.
 
 This guide provides practical **furniture care tips** to help you protect your investment and keep your wooden pieces looking stunning for years. Whether you’ve recently used a professional service or just want to revive tired-looking furniture, you’ve come to the right place.

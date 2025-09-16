@@ -1,4 +1,4 @@
-const n=`
+const e=`
 ## **Introduction**
 If your sofa, dining table, or wooden furniture has started to look dull, scratched, or faded, polishing is the smartest way to bring it back to life. Buying new furniture is expensive, but with **A1 Furniture Polish in Bandra, Mumbai**, you can make your old furniture look brand new at **affordable rates**.  
 
@@ -159,4 +159,4 @@ Yes, they cover **Jogeshwari, Andheri, Goregaon, and all over Mumbai**.
 
 **5. How do I book a service?**  
 Simply visit [a1furniturepolish.com](https://a1furniturepolish.com/) or WhatsApp **+91 8828709945**.  
-`;export{n as default};
+`;export{e as default};

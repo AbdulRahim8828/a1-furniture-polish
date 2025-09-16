@@ -25,7 +25,6 @@ const BlogListPage = () => {
             {blogPosts.map((post) => (
               <div key={post.slug} className="bg-white rounded-lg shadow-md overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300">
                 <Link to={`/blog/${post.slug}`} className="block">
-                  <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
                   <div className="p-6">
                     <span className="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold mb-3">
                       {post.category}
